@@ -3,10 +3,10 @@ kind: Kustomization
 namespace: default
 images:
   - name: todo-backend
-    newName: k3d-cicd-registry:5000/todo-backend
+    newName: k3d-cicd-registry:5050/todo-backend
     newTag: latest
   - name: todo-frontend
-    newName: k3d-cicd-registry:5000/todo-frontend
+    newName: k3d-cicd-registry:5050/todo-frontend
     newTag: latest
 resources:
   - backend/deployment.yaml

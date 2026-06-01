@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: k3d-cicd-registry:5000/todo-frontend:latest
+          image: k3d-cicd-registry:5050/todo-frontend:latest
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 80
