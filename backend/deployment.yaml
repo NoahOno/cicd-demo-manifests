@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name: backend
-          image: k3d-cicd-registry:5050/todo-backend:v3.9.1
+          image: k3d-cicd-registry:5050/todo-backend:v3.9.2
           imagePullPolicy: Always
           ports:
             - containerPort: 8000
