@@ -1,26 +1,26 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: app-frontend
+  name: todo-frontend
   namespace: default
   labels:
-    app: app
+    app: todo
     component: frontend
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: app
+      app: todo
       component: frontend
   template:
     metadata:
       labels:
-        app: app
+        app: todo
         component: frontend
     spec:
       containers:
         - name: frontend
-          image: k3d-cicd-registry:5050/app-frontend:v3.9.0
+          image: k3d-cicd-registry:5050/todo-frontend:v3.9.1
           imagePullPolicy: Always
           ports:
             - containerPort: 3000
