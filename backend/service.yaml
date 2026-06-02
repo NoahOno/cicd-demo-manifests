@@ -1,13 +1,17 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: backend
+  name: app-backend
+  namespace: default
   labels:
-    app: todo-backend
+    app: app
+    component: backend
 spec:
-  selector:
-    app: todo-backend
-  ports:
-    - port: 8000
-      targetPort: 8000
   type: ClusterIP
+  selector:
+    app: app
+    component: backend
+  ports:
+    - protocol: TCP
+      port: 8000
+      targetPort: 8000
